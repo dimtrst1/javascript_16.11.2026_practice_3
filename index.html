@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Угадай число</h1>
+    <script>
+        alert("Загадайте число от 0 до 100");
+
+        let min = 0;
+        let max = 100;
+        let answer;
+
+        while (min <= max)
+        {
+            let N = parseInt((min + max) / 2);
+
+            answer = prompt("Ваше число " + N + "?\nВведите >, < или =");
+
+            if (answer == "=") {
+                alert("Я угадал! Ваше число: " + N);
+                break;
+            }
+
+            else if (answer == ">"){
+                min = N + 1;
+            }
+
+            else if (answer == "<")
+            {
+                max = N - 1;
+            }
+
+            else {
+                alert("Введите >, < или =");
+            }
+        }
+    </script>
+</body>
+</html>
